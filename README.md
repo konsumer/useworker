@@ -21,7 +21,7 @@ You can see an [example hook](./example/src/useResizeImage.js) where I resize up
 Basic idea is like this:
 
 ```js
-import useWorker form 'useworker'
+import useWorker from 'useworker'
 
 function MyThing() {
   // all params are optional
