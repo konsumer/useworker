@@ -17,3 +17,14 @@ npm i useworker
 ## usage
 
 You can see an [example hook](./example/src/useResizeImage.js) where I resize uploaded images in a worker.
+
+Basic idea is like this:
+
+```js
+
+const doStuff = useWorker ({ onWork, onFinish, onError })
+
+// onWork   - called as worker. It can be a string or a function. Must be self-contained. It gets it's input from event.data, and outputs with postMessage 
+// onFinish - host-side, called when worker does a postMessage
+// onError  - host-side, called when worker has an error
+```
