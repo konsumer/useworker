@@ -4,6 +4,11 @@ on:
   release:
     types: [published]
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to npm
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
