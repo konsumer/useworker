@@ -20,19 +20,38 @@ You can see an [example hook](./example/src/useResizeImage.js) where I resize up
 
 Basic idea is like this:
 
-```js
+```jsx
 import useWorker from 'useworker'
+
+// worker-side, called as worker. It can be a string or a function. Must be self-contained. It gets it's input from event.data, and outputs with postMessage
+function onWork({data}) {
+  // do whatever with data, in worker
+  console.log(`useworker is ${data || 'amazing'}!`)
+  postMessage('I finished.')
+}
+
+// host-side, called when worker does a postMessage
+function onFinish(response) {
+  // response is whatever onWork() called with postMessage()
+  console.log(response)
+}
+
+// host-side, called when worker has an error
+function onError(e) {
+  console.error(e.message)
+}
 
 function MyThing() {
   // all params are optional
   const doStuff = useWorker ({ onWork, onFinish, onError })
 
-  return whatever
+  // call doStuff when you want to do work, it will send input arg as event.data
+  doStuff('cool')
+
+  return (
+    <div>
+      Check the console
+    </div>
+  )
 }
-
-// onWork   - called as worker. It can be a string or a function. Must be self-contained. It gets it's input from event.data, and outputs with postMessage 
-// onFinish - host-side, called when worker does a postMessage
-// onError  - host-side, called when worker has an error
-
-// call doStuff when you want to do work, it will send input arg as event.data
 ```
