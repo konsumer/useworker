@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "cd example && npm ci && npm start",
-    "build:site": "cd example && npm ci && npm run build && mv dist .."
+    "build": "cd example && npm ci && npm run build && mv dist .."
   },
   "keywords": [
     "react",

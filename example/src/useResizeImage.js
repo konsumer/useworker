@@ -1,6 +1,7 @@
 // a react-hook that will resize images in a worker
 
-import useWorker from 'useworker'
+// normally this would be @konsumer/useworker
+import useWorker from '../../index.js'
 
 // dummy function for callback-defaults
 const noop = () => {}
