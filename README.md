@@ -23,7 +23,9 @@ Basic idea is like this:
 ```jsx
 import useWorker from '@konsumer/useworker'
 
-// worker-side, called as worker. It can be a string or a function. Must be self-contained. It gets it's input from event.data, and outputs with postMessage
+// worker-side, called as worker. It can be a string or a function.
+// Must be self-contained.
+// It gets it's input from event.data, and outputs with postMessage
 function onWork({data}) {
   // do whatever with data, in worker
   console.log(`useworker is ${data || 'amazing'}!`)
