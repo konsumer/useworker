@@ -19,5 +19,13 @@
   "license": "MIT",
   "publishConfig": {
     "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/useworker.git"
+  },
+  "homepage": "https://konsumer.js.org/useworker",
+  "bugs": {
+    "url": "https://github.com/konsumer/useworker/issues"
   }
 }
