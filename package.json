@@ -1,0 +1,14 @@
+{
+  "name": "useworker",
+  "version": "0.0.0",
+  "description": "Simple react hook for offloading work to another thread",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cd example && npm ci && npm start",
+    "build:site": "cd example && npm ci && npm run build && mv dist .."
+  },
+  "keywords": ["react", "hook", "worker", "webworker", "thread"],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT"
+}
