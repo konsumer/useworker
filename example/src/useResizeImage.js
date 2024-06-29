@@ -10,6 +10,7 @@ const noop = () => {}
 export const useResizeImage = (onSuccess = noop, onError = noop, size = [100, 100], options = {}, mimeType = 'image/png', quality) => {
   // this will be called in the worker
   // I am using a string here, to get around vite mangling import
+  // if you are using another bundler or no import, you can just use a regular function
   const onWork = `async event => {
     const { file, size: [w, h], options, mimeType, quality } = event.data
 
