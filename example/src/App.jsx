@@ -38,7 +38,7 @@ export default function PageExample () {
     <main className='m-auto p-4 prose dark:prose-invert lg:prose-xl'>
       <h1>useWorker</h1>
       <p>This is a simple example of <a href='https://github.com/konsumer/useworker'>useWorker</a>.</p>
-      <p>Upload an image, and it will resize it for you. Here is <a href='https://github.com/'>the source</a>.</p>
+      <p>Upload an image, and it will resize it for you. Here is <a href='https://github.com/konsumer/useworker/tree/main/example'>the source</a>.</p>
       {error && (
         <div role='alert' className='alert alert-error flex mb-4'>
           <IconError />
