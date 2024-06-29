@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "useworker": "../"
+    "@konsumer/useworker": "../"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",

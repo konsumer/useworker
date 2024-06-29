@@ -1,6 +1,6 @@
 {
-  "name": "useworker",
-  "version": "0.0.1",
+  "name": "@konsumer/useworker",
+  "version": "0.0.0",
   "description": "Simple react hook for offloading work to another thread",
   "main": "index.js",
   "type": "module",
@@ -16,5 +16,8 @@
     "thread"
   ],
   "author": "David Konsumer <konsumer@jetboystudio.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "provenance": true
+  }
 }

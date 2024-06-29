@@ -11,7 +11,7 @@ Use this whenever you can benefit from putting work in another thread, on the we
 ## installation
 
 ```
-npm i useworker
+npm i @konsumer/useworker
 ```
 
 ## usage
@@ -21,7 +21,7 @@ You can see an [example hook](./example/src/useResizeImage.js) where I resize up
 Basic idea is like this:
 
 ```jsx
-import useWorker from 'useworker'
+import useWorker from '@konsumer/useworker'
 
 // worker-side, called as worker. It can be a string or a function. Must be self-contained. It gets it's input from event.data, and outputs with postMessage
 function onWork({data}) {
