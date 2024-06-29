@@ -1,6 +1,6 @@
 {
   "name": "@konsumer/useworker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple react hook for offloading work to another thread",
   "main": "index.js",
   "type": "module",
