@@ -28,5 +28,5 @@ const doStuff = useWorker ({ onWork, onFinish, onError })
 // onFinish - host-side, called when worker does a postMessage
 // onError  - host-side, called when worker has an error
 
-// call doStruff when you want to do work, it will send input arg as event.data
+// call doStuff when you want to do work, it will send input arg as event.data
 ```
