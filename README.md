@@ -21,6 +21,7 @@ You can see an [example hook](./example/src/useResizeImage.js) where I resize up
 Basic idea is like this:
 
 ```js
+// all params are optional
 
 const doStuff = useWorker ({ onWork, onFinish, onError })
 
