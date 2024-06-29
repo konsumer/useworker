@@ -21,8 +21,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v3
-        with:
-          cache: 'npm'
       - name: Build Site
         run: npm run build:site
       - name: Upload artifact
