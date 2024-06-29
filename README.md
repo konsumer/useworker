@@ -21,9 +21,14 @@ You can see an [example hook](./example/src/useResizeImage.js) where I resize up
 Basic idea is like this:
 
 ```js
-// all params are optional
+import useWorker form 'useworker'
 
-const doStuff = useWorker ({ onWork, onFinish, onError })
+function MyThing() {
+  // all params are optional
+  const doStuff = useWorker ({ onWork, onFinish, onError })
+
+  return whatever
+}
 
 // onWork   - called as worker. It can be a string or a function. Must be self-contained. It gets it's input from event.data, and outputs with postMessage 
 // onFinish - host-side, called when worker does a postMessage
