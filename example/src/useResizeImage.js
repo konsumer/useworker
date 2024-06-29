@@ -11,7 +11,8 @@ const noop = () => {}
 // this is a reusable worker-hook
 export const useResizeImage = (onSuccess = noop, onError = noop, size = [100, 100], options = {}, mimeType = 'image/png', quality) => {
   // this will be called in the worker
-  const onWork = useCallback(async event => {
+  // I am using a string here, to get around vite mangling import
+  const onWork = useCallback(`async event => {
     const { file, size: [w, h], options, mimeType, quality } = event.data
 
     // get the file as ImageBitmap
@@ -28,7 +29,7 @@ export const useResizeImage = (onSuccess = noop, onError = noop, size = [100, 10
 
     // send the URL back to host's onSuccess()
     postMessage(URL.createObjectURL(b))
-  })
+  }`)
 
   const w = useWorker({
     onFinish: onSuccess,
